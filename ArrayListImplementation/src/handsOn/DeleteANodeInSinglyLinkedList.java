@@ -1,0 +1,26 @@
+package handsOn;
+
+import java.util.Scanner;
+
+import linkedList.MyLinkedList;
+
+public class DeleteANodeInSinglyLinkedList {
+	public static void main(String args[]) {
+
+		Scanner input = new Scanner(System.in);
+		MyLinkedList list = new MyLinkedList();
+
+		System.out.println("Enter the linked list elements and enter -1 at the end: ");
+		int x = input.nextInt();
+		while (x != -1) {
+			list.insertingAtTheEnd(x);
+			x = input.nextInt();
+		}
+
+		System.out.println("Enter the position to delete: ");
+		int position = input.nextInt();
+		list.deleteAtTheSpecificIndex(position);
+
+		list.display();
+	}
+}
